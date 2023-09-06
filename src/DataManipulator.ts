@@ -23,7 +23,7 @@ export class DataManipulator {
     const upper_bound = 1 + 0.05;
     const lower_bound = 1 - 0.05;
 
-    return serverRespond.map((el: any) => {
+    // return serverRespond.map((el: any) => {
       return {
         // stock: el.stock,
         // top_ask_price: el.top_ask && el.top_ask.price || 0,
@@ -38,6 +38,6 @@ export class DataManipulator {
         lower_bound : lower_bound,
         trigger_alert : (ratio > upper_bound || ratio < lower_bound) ? ratio : undefined, 
       };
-    })
+    // })
   }
 }
